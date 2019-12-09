@@ -6,12 +6,13 @@ This is an addin for Microsoft Excel which enables a few user-defined functions 
 
 # Features
 
-- Contains 8 functions:
+- Contains 10 functions:
     - simple and discounted Payback Periods (PBP, DPBP) with option to extend cashflows
     - Profitability Index (PI)
     - payable sum from available cash flow and future cash flows
     - depreciation from a range of CAPEX values
     - Income Tax with Tax shield
+    - extension of value range as Arithmetic or Geometric progression
     - 2 CAGR calculations: from range of values or from start and end values
     - Limitation of parameter value in target range
 - Allows seamless work in groups by automatically updating Excel links to this addin
@@ -46,6 +47,30 @@ fDepreciation(rCapex As Range, dDepreciationPeriod As Double) As Double
 ```
 
 - "rCapex" - cell range with CAPEX values in previous periods
+
+## fExtendAP - extend range of values as Arithmetic progression
+
+fExtendAP takes input array and then returns an array extended further as Arithmetic progression. May be used in such formulas as NPV() or IRR().
+
+```
+fExtendAP(vInput As Variant, iPeriods As Variant, Optional dGrowthRate As Variant) As Variant
+```
+
+- "vInput" - may be a cell range or a single number
+- "iPeriods" - number of periods to extend for
+- Optional "dGrowthRate" - the common difference used for the Arithmetic progression. Default value = 0.
+
+## fExtendGP - extend range of values as Geometric progression
+
+fExtendGP takes input array and then returns an array extended further as Geometric progression. May be used in such formulas as NPV() or IRR().
+
+```
+fExtendGP(vInput As Variant, iPeriods As Variant, Optional dGrowthRate As Variant) As Variant
+```
+
+- "vInput" - may be a cell range or a single number
+- "iPeriods" - number of periods to extend for
+- Optional "dGrowthRate" - the common ratio used for the Geometric progression. Default value = 1.
 
 ## fIncomeTax - calculate income tax
 

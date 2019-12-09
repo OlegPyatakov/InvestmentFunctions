@@ -19,7 +19,7 @@ For iCurrCapexYear = 1 To WorksheetFunction.Min(rCapex.Cells.Count, WorksheetFun
     Else
         dDepreciationRate = 1 / dDepreciationPeriod
     End If
-    Debug.Print iCurrCapexYear & " - " & dDepreciationRate
+    'Debug.Print iCurrCapexYear & " - " & dDepreciationRate
     fDepreciation = fDepreciation + rCapex.Cells(rCapex.Cells.Count - iCurrCapexYear + 1) * dDepreciationRate
 Next
 
