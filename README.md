@@ -2,6 +2,8 @@
 
 This is an addin for Microsoft Excel which enables a few user-defined functions (UDFs) for financial and investment modelling.
 
+*For detailed description in Russian please check [this blogpost](https://pyatakov.com/blog/investment-functions-полезные-макросы-для-финансовых-моделей/).*
+
 ![functions](img/functions.png)
 
 # Features
@@ -83,7 +85,7 @@ fIncomeTax(rProfitRange As Range, dTaxRate As Double, Optional dPriorProfitsAndL
 ## fLimit - limit parameter value in target range
 
 ```
-fLimit(varInput, varLimit1, varLimit2
+fLimit(varInput, varLimit1, varLimit2)
 ```
 
 ## fPayout - calculate payable sum from available cash flow and future cash flows
